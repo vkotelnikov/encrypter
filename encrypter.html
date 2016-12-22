@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function duplicateEncode(word){
+  var newword = '';
+    for (var i = 0; i < word.length; i++){
+  		var tru = false;
+      for (var j = 0; j < word.length; j++){
+      	if (word[i].toLowerCase() == word[j].toLowerCase() && i!=j) {tru = true;}
+        // tru = true : tru = false;
+      }
+      if(tru){
+          newword = newword + ')';
+        }else{
+          newword = newword + '(';
+   	  	}
+}
+    return newword;
+}
+</script>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+document.write(duplicateEncode("Hello"));
+</script>
+
+</body>
+</html>
