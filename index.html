@@ -17,15 +17,18 @@ function duplicateEncode(word){
           newword = newword + '(';
    	  	}
 }
-    return newword;
+document.getElementById("encryption").innerHTML = newword;
+    // return newword;
 }
 </script>
 	<title>Encrypter</title>
 </head>
 <body>
-<script type="text/javascript">
-document.write(duplicateEncode("Hello"));
-</script>
+<form>
+  <input type="text" name="toencrypt">
+  <input type="button" name="but" onclick="duplicateEncode(toencrypt.value)" value="Click!">
+</form>
+<div id="encryption"></div>
 
 </body>
 </html>
